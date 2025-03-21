@@ -23,10 +23,10 @@ function App() {
       <footer className="footer">
         &copy; 2025 Rebehayan
         <nav>
-          <a href="https://github.com/rebehayan/svgtocss" target="_blank" class="new">
+          <a href="https://github.com/rebehayan/svgtocss" target="_blank" className="new">
             Github
           </a>
-          <a href="https://portfolio-eight-phi-27.vercel.app/" target="_blank" class="new">
+          <a href="https://portfolio-eight-phi-27.vercel.app/" target="_blank" className="new">
             About
           </a>
         </nav>
