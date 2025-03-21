@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Input from "./components/Input";
-import Output from "./components/output";
+import Output from "./components/Output";
 
 function App() {
   const [isResult, setIsResult] = useState("");
