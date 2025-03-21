@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&amp;display=swap");
+
+:root {
+  --gray: #f0f0f0;
+  --green: #d4dcc0;
+  --red: #ff8754;
+  --dark: #1c1c29;
+  --darkLight: rgba(28, 28, 41, 0.5);
+  --white: #fff;
+  --kor: "Gothic A1", serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--kor);
+  &::selection {
+    background-color: var(--darkLight);
+    color: var(--white);
+  }
+}
+body {
+  padding: 4rem;
+  background-color: #f0f0f0;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -5,13 +31,139 @@ main {
   gap: 1rem;
 }
 textarea {
-  height: clamp(100px, 30vh, 200px);
+  border: 2px solid var(--dark);
   padding: 1rem;
-  font-size: 1rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: border 0.5s;
+  outline: none;
+  font-family: var(--kor);
+  resize: vertical;
+  &:focus {
+    border-color: var(--red);
+  }
+  &::placeholder {
+    font-family: var(--kor);
+  }
 }
 .input {
   display: grid;
+  gap: 1rem;
 }
 .output {
   display: grid;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    width: 30px;
+  }
+}
+
+.division {
+  width: 2rem;
+  aspect-ratio: 1;
+  background: no-repeat center / contain;
+  background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cscript%20xmlns%3D%22%22%2F%3E%3Cpath%20fill%3D%22green%22%20d%3D%22M5.536%2021.886a1.004%201.004%200%200%200%201.033-.064l13-9a1%201%200%200%200%200-1.644l-13-9A1%201%200%200%200%205%203v18a1%201%200%200%200%20.536.886z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+a.new {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  &::after {
+    content: "";
+    width: 1.5rem;
+    aspect-ratio: 1;
+    background: no-repeat center / contain;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cscript%20xmlns%3D%22%22%2F%3E%20%20%20%20%20%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M28%204H10a2.006%202.006%200%200%200-2%202v14a2.006%202.006%200%200%200%202%202h18a2.006%202.006%200%200%200%202-2V6a2.006%202.006%200%200%200-2-2Zm0%2016H10V6h18Z%22%2F%3E%20%20%20%20%20%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M18%2026H4V16h2v-2H4a2.006%202.006%200%200%200-2%202v10a2.006%202.006%200%200%200%202%202h14a2.006%202.006%200%200%200%202-2v-2h-2Z%22%2F%3E%20%3C%2Fsvg%3E");
+  }
+}
+
+label {
+  margin-top: 1rem;
+  transition: color 0.5s;
+}
+
+.footer {
+  margin-top: 4rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  a {
+    font-size: 1rem;
+    color: inherit;
+    transition: 0.5s;
+    &:hover {
+      color: var(--red);
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+h2 {
+  color: var(--dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  ~ h2 {
+    margin-top: 2rem;
+  }
+}
+
+.btn-primary {
+  background-color: var(--red);
+  border: none;
+  border-radius: 10rem;
+  padding-block: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  color: var(--white);
+}
+.btn-secondary {
+  background-color: var(--green);
+  border: none;
+  border-radius: 10rem;
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  color: var(--dark);
+}
+.btn-confirm {
+  background-color: dodgerblue;
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  min-width: 4rem;
+  border-radius: 5rem;
+}
+.dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  translate: -50% -50%;
+  padding: 2.5rem;
+  text-align: center;
+  z-index: 100;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(28, 28, 41, 0.2);
+  [method="dialog"] {
+    margin-top: 0.7rem;
+  }
 }

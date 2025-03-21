@@ -5,7 +5,9 @@ export default function Dialog({ ref, children }) {
     <dialog className="dialog" ref={ref}>
       {children}
       <form method="dialog">
-        <button type="submit">확인</button>
+        <button type="submit" className="btn-confirm">
+          확인
+        </button>
       </form>
     </dialog>
   );

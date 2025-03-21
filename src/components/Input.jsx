@@ -18,10 +18,14 @@ export default function Input({ onResult }) {
 
   return (
     <div>
-      <h2>SVG</h2>
+      <h2>
+        <label htmlFor="svg">SVG코드를 삽입하세요</label>
+      </h2>
       <form onSubmit={handleSubmit} className="input">
-        <textarea required value={isValue} onChange={(e) => setIsValue(e.target.value.replace(/\n/g, " "))}></textarea>
-        <button type="submit">변환</button>
+        <textarea id="svg" required value={isValue} onChange={(e) => setIsValue(e.target.value.replace(/\n/g, " "))}></textarea>
+        <button type="submit" className="btn-primary">
+          Generate
+        </button>
       </form>
       <Dialog ref={dialogRef}>정상적인 SVG코드를 넣어주세요.</Dialog>
     </div>
