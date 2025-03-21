@@ -1,6 +1,5 @@
 import React from "react";
 import OutputCode from "./OutputCode";
-import OutputSCSS from "./OutputSCSS";
 import OutputCSS from "./OutputCSS";
 
 export default function Output({ result }) {
@@ -10,7 +9,6 @@ export default function Output({ result }) {
       <OutputCode result={result} />
       <h2>background-image</h2>
       <OutputCSS result={result} />
-      {/* <OutputSCSS result={result} /> */}
     </>
   );
 }
