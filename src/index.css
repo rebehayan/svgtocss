@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
 :root {
   --gray: #f0f0f0;
@@ -7,7 +7,7 @@
   --dark: #1c1c29;
   --darkLight: rgba(28, 28, 41, 0.5);
   --white: #fff;
-  --kor: "Gothic A1", serif;
+  --kor: "Noto Sans KR", sans-serif;
 }
 * {
   padding: 0;
@@ -35,8 +35,8 @@ textarea {
   padding: 1rem;
   height: 20rem;
   border-radius: 0.5rem;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   transition: border 0.5s;
   outline: none;
   font-family: var(--kor);
