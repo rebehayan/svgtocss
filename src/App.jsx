@@ -26,7 +26,7 @@ function App() {
           <a href="https://github.com/rebehayan/svgtocss" target="_blank" className="new">
             Github
           </a>
-          <a href="https://portfolio-eight-phi-27.vercel.app/" target="_blank" className="new">
+          <a href="https://rebehayan.vercel.app/" target="_blank" className="new">
             About
           </a>
         </nav>
